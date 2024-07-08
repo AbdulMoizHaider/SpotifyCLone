@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spotify</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    
+    body {
+    margin: 0;
+    font-family: Arial;
+    background-color: black;
+}
+
+.home-search-sidebar {
+    position: fixed;
+    top: 6px;
+    left: 7px;
+    right: 7px;
+    height: 92px;
+    border-radius: 6px;
+    background-color: rgb(22, 21, 21);
+    min-width: 100px;
+}
+
+.home-area, .search-area {
+    margin: 7px 20px;
+    padding: 7px 0 3px;
+}
+
+.home-area a, .search-area a {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: bold;
+    color: white;
+    padding: 15px 90px 5px 0;
+}
+
+.header {
+    position: fixed;
+    top: 7px;
+    right: 6px;
+    left: 7px;
+    height: 50px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(22, 21, 21);
+}
+
+.sidebar-2 {
+    position: fixed;
+    top: 104px;
+    left: 7px;
+    bottom: 67px;
+    width: 100%;
+    max-width: 226px;
+    border-radius: 6px;
+    background-color: rgb(22, 21, 21);
+}
+
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    column-gap: 15px;
+    margin: 40px 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 6px;
+    left: 7px;
+    right: 7px;
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+}
+
+.left-footer {
+    flex: 3;
+}
+
+.right-footer {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up-button {
+    background-color: white;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: bold;
+    border: none;
+    margin: 5px 160px 0 160px;
+    padding: 13px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    min-width: 130px;
+}
+
+.sign-up-button:hover {
+    padding: 15px 27px;
+    transition: 0.1s;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .home-search-sidebar, .header, .sidebar-2, .footer {
+        left: 7px;
+        right: 7px;
+    }
+
+    .home-area a, .search-area a {
+        padding-right: 20px;
+    }
+
+    .sign-up-button {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .song-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
+
+ </style>
+   
+</head>
+<body>
+    <div class="home-search-sidebar">
+        <div class="home-area"><a href="#"><i class="fa fa-home" style="font-size: 25px;"></i>Home</a></div>
+        <div class="search-area"><a href="#"><i class="fa fa-search" style="font-size: 25px;"></i>Search</a></div>
+    </div>
+    <div class="header">
+        <div class="left-header">
+            <button>&lt</button>
+            <button>&gt</button>
+        </div>
+        <div class="midle-header">
+            <ul>
+                <li><a href="#">Premium</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Download</a></li>
+            </ul>
+        </div>
+        <div class="right-header">
+            <span>|</span>
+            <button class="sign-up">Sign up</button>
+            <buton class="log-in"><a href="index.html">Log in</a></buton>
+        </div>
+
+    </div>
+ <div class="sidebar-2">
+    <div class="library">
+        <div class="icon-heading"><i class="fa fa-book"></i><span>Your Library</span></div>
+        <div class="plus-button-area"><button class="plus-button">+</button></div>
+    </div>
+    <div class="scroll-div">
+      <div class="scroll-part-1">
+        <div><p class="first-line">Create your first playlist</p>
+        <p class="second-line">it's easy, we'll help you</p></div>
+        <div class="button-area">
+        <button class="playlist-button">Create playlist</button>
+      </div>
+    </div>
+
+
+    <div class="scroll-part-1">
+        <div><p class="first-line">Let's find some podcasts to follow</p>
+        <p class="second-line">We will keep you update on new episodes</p></div>
+        <div class="button-area">
+        <button class="playlist-button">Browse podcasts</button>
+      </div>
+    </div>
+    </div>
+    <div class="link-area">
+        <a href=web.html>Legal</a>
+        <a href="#">Privacy Center</a>
+        <a href="#">Privacy policy</a>
+        <a href="#">Cookies</a>
+        <a href="#">About Ads</a>
+        <a href="#">Accessibility</a>
+        <a class="cookies-link" href="#">Cookies</a> 
+    </div>
+    <div class="english-button">
+        <button>English</button>
+    </div>
+    
+ </div>
+<div class="song-part">
+    <div class="song-grid">
+        <div class="song-preview" >
+            <div class="play"><i class="fa fa-play"></i></div>
+          <div class="song-img-area">
+              <img class="song-img" src="spotify-imgs.jpg">
+          </div>
+         <div class="song-info">
+          <p class="song-title">Peaceful Piano</p>
+          <p class="song-detail">Peaceful piano to help you slow down</p>
+         </div>
+         
+      </div>
+      <div class="song-preview" >
+        <div class="play"><i class="fa fa-play"></i></div>
+        <div class="song-img-area">
+            <img class="song-img" src="spotify-imgs.jpg">
+        </div>
+       <div class="song-info">
+        <p class="song-title">Peaceful Piano</p>
+        <p class="song-detail">Peaceful piano to help you slow down</p>
+       </div>
+       
+    </div>
+    <div class="song-preview" >
+        <div class="play"><i class="fa fa-play"></i></div>
+      <div class="song-img-area">
+          <img class="song-img" src="spotify-imgs.jpg">
+      </div>
+     <div class="song-info">
+      <p class="song-title">Peaceful Piano</p>
+      <p class="song-detail">Peaceful piano to help you slow down</p>
+     </div>
+     
+  </div>
+  <div class="song-preview" >
+    <div class="play"><i class="fa fa-play"></i></div>
+    <div class="song-img-area">
+        <img class="song-img" src="spotify-imgs.jpg">
+    </div>
+   <div class="song-info">
+    <p class="song-title">Peaceful Piano</p>
+    <p class="song-detail">Peaceful piano to help you slow down</p>
+   </div>
+   
+  </div>
+  <div class="song-preview" >
+    <div class="play"><i class="fa fa-play"></i></div>
+    <div class="song-img-area">
+        <img class="song-img" src="spotify-imgs.jpg">
+    </div>
+   <div class="song-info">
+    <p class="song-title">Peaceful Piano</p>
+    <p class="song-detail">Peaceful piano to help you slow down</p>
+   </div>
+   
+  </div>
+  <div class="song-preview" >
+    <div class="play"><i class="fa fa-play"></i></div>
+    <div class="song-img-area">
+        <img class="song-img" src="spotify-imgs.jpg">
+    </div>
+   <div class="song-info">
+    <p class="song-title">Peaceful Piano</p>
+    <p class="song-detail">Peaceful piano to help you slow down</p>
+   </div>
+   
+  </div>
+      </div>
+
+
+      <div class="song-grid">
+        <div class="song-preview" >
+            <div class="play"><i class="fa fa-play"></i></div>
+          <div class="song-img-area">
+              <img class="song-img" src="spotify-imgs.jpg">
+          </div>
+         <div class="song-info">
+          <p class="song-title">Peaceful Piano</p>
+          <p class="song-detail">Peaceful piano to help you slow down</p>
+         </div>
+         
+      </div>
+      <div class="song-preview" >
+        <div class="play"><i class="fa fa-play"></i></div>
+        <div class="song-img-area">
+            <img class="song-img" src="spotify-imgs.jpg">
+        </div>
+       <div class="song-info">
+        <p class="song-title">Peaceful Piano</p>
+        <p class="song-detail">Peaceful piano to help you slow down</p>
+       </div>
+       
+    </div>
+    <div class="song-preview" >
+        <div class="play"><i class="fa fa-play"></i></div>
+      <div class="song-img-area">
+          <img class="song-img" src="spotify-imgs.jpg">
+      </div>
+     <div class="song-info">
+      <p class="song-title">Peaceful Piano</p>
+      <p class="song-detail">Peaceful piano to help you slow down</p>
+     </div>
+     
+  </div>
+  <div class="song-preview" >
+    <div class="play"><i class="fa fa-play"></i></div>
+    <div class="song-img-area">
+        <img class="song-img" src="spotify-imgs.jpg">
+    </div>
+   <div class="song-info">
+    <p class="song-title">Peaceful Piano</p>
+    <p class="song-detail">Peaceful piano to help you slow down</p>
+   </div>
+   
+  </div>
+  <div class="song-preview" >
+    <div class="play"><i class="fa fa-play"></i></div>
+    <div class="song-img-area">
+        <img class="song-img" src="spotify-imgs.jpg">
+    </div>
+   <div class="song-info">
+    <p class="song-title">Peaceful Piano</p>
+    <p class="song-detail">Peaceful piano to help you slow down</p>
+   </div>
+   
+  </div>
+  <div class="song-preview" >
+    <div class="song-img-area">
+        <img class="song-img" src="spotify-imgs.jpg">
+    </div>
+   <div class="song-info">
+    <p class="song-title">Peaceful Piano</p>
+    <p class="song-detail">Peaceful piano to help you slow down</p>
+   </div>
+   
+  </div>
+      </div>
+
+</div>
+
+    <div class="footer">
+        
+    <div class="left-footer">
+        <p class="footer-first-paragraph">PREVIEW OF SPOTIFY</p>
+ <p class="footer-second-paragraph">Sign up to get unlimited songs and podcasts with occasional ads.No credit and needed. </p>
+    </div>
+    <div class="right-footer">
+        <button class="sign-up-button"><a href="https://www.spotify.com/pk-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F">Sign up free</a></button>
+    </div>
+
+    </div>
+</body>
+</html>

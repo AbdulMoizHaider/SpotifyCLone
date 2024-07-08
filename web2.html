@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Your Web Page</title>
+</head>
+
+
+<body>
+   
+<div class="header"></div>
+<div class="logo_container"><img src="Spotify.png" class="Spotify_logo"></div>
+   <div class="container">
+  <h1 class="Name">Log in to Spotify</h1>
+
+  <div class="button-container">
+    <button class="google-button" onclick="redirect('https://accounts.google.com')"><div class="logins_logo_container"><img src="google_logo.png" class="google-logo"></div>Continue with Google</button>
+    <button class="facebook-button" onclick="redirect('https://www.facebook.com')"><div class="logins_logo_container"><img src="facebook_logo.png" class="facebook-logo"></div>Continue with Facebook</button>
+    <button class="apple-button" onclick="redirect('https://appleid.apple.com')"><div class="logins_logo_container"><img src="apple_logo.png" class="apple-logo"></div>Continue with Apple</button>
+  </div>
+
+  <div class="line"></div>
+
+  <div class="form-container">
+    <form onsubmit="return validateForm()">
+      <label class="lbl_username" for="username-email">Username or Email</label>
+      <input type="text" id="username-email" name="username-email">
+
+      <label class="lbl_password" for="password">Password</label>
+      <input type="password" id="password" name="password">
+
+      <div class="additional-options">
+        <input class="check_box" type="checkbox" id="remember-me">
+        <label class="lbl_remember" for="remember-me">Remember Me</label>
+      </div>
+
+      <button type="submit" class="login-button">Log In</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var usernameEmail = document.getElementById("username-email").value;
+      var password = document.getElementById("password").value;
+
+      if (usernameEmail.trim() === "" || password.trim() === "") {
+        alert("Please fill in both fields before continuing.");
+        return false; // Prevent form submission
+      }
+
+      // Proceed with form submission if fields are filled
+      return true;
+    }
+
+    function redirect(url) {
+      window.location.href = url;
+    }
+  </script>
+
+<p>Forget your password?</p>
+<p>Don't have an account? <strong onclick="redirect('https://www.spotify.com/pk-en/signup')">Sign-up for free.</strong></p>
+</body>
+</div>
+
+</html>

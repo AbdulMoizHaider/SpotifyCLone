@@ -1,0 +1,244 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #222222;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logo_container {
+  background-color: black;
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.header {
+  background-color: #222222;
+  position: absolute;
+  height: 160px;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  margin-top: 30px;
+  background-color: black;
+  padding: 200px 200px 0 200px;
+}
+
+.Spotify_logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  height: 90px;
+  width: 170px;
+}
+
+.Name {
+  font-family: var(--font-family, CircularSpTitle, CircularSpTitle-Tall, CircularSp-Arab, CircularSp-Hebr, CircularSp-Cyrl, CircularSp-Grek, CircularSp-Deva, var(--fallback-fonts, sans-serif));
+  font-size: 40px;
+  margin-top: 600px;
+  padding: 20px;
+  background-color: black;
+  color: white;
+}
+
+.Name:hover {
+  color: #1db954;
+}
+
+.button-container {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  padding: 15px 40px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  font-size: 16px;
+  width: 400px;
+  font-weight: bold;
+  background-color: black;
+  cursor: pointer;
+  border: 2px solid white;
+  color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.logins_logo_container {
+  padding: 0;
+  background-color: black;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.google-logo,
+.facebook-logo,
+.apple-logo {
+  width: 20px;
+  height: 20px;
+}
+
+.button-container button:hover,
+.login-button:hover {
+  border-style: dashed;
+}
+
+.form-container {
+  margin-top: 100px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lbl_username,
+.lbl_password,
+.lbl_remember {
+  margin-top: 9px;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.lbl_username {
+  margin-left: -199px;
+}
+
+.lbl_password {
+  margin-left: -260px;
+}
+
+input {
+  height: 20px;
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+}
+
+input:hover {
+  background-color: #87CEEB;
+  color: white;
+}
+
+.additional-options {
+  padding: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.check_box:hover {
+  background-color: #003366;
+}
+
+.additional-options label {
+  font-size: 14px;
+  color: white;
+}
+
+.login-button {
+  background-color: #1db954;
+  border: 2px solid white;
+  width: 300px;
+}
+
+p {
+  padding: 20px;
+  color: white;
+  margin-top: 30px;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+p:hover {
+  color: #1db954;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  button {
+    width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  button {
+    width: 250px;
+  }
+
+  .Name {
+    font-size: 30px;
+  }
+
+  .lbl_username {
+    margin-left: -100px;
+  }
+
+  .lbl_password {
+    margin-left: -100px;
+  }
+
+  .logins_logo_container {
+    width: 15px;
+    height: 15px;
+  }
+
+  .google-logo,
+  .facebook-logo,
+  .apple-logo {
+    width: 15px;
+    height: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  button {
+    width: 200px;
+  }
+
+  .Name {
+    font-size: 20px;
+  }
+
+  .lbl_username,
+  .lbl_password {
+    margin-left: 0;
+    text-align: center;
+  }
+}
